@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: intake-stac
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/intake-stac/intake_stac-{{ version }}.tar.gz
-  sha256: bc697d8fc1d4f9fd307d7776863d6c3ab1ce24b33feb4dc7c16ddd72a1d192cb
+  sha256: 459fc585cafda0509b696bec59cc089d7868d6670f9345a804b3613aebd84c61
 
 build:
   number: 0
