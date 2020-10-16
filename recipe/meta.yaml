@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 
 package:
   name: intake-stac
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/intake-stac/intake_stac-{{ version }}.tar.gz
-  sha256: f70713fca72f494af8a715baaa96a5ecfbcf300a4583e6764f1b8e89a4599fae
+  sha256: 19baf6b6392c9843e1ec988f251e3355d17e389d349d76e1e6ddabf4c0d1cbce
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Intake interface to STAC data catalogs'
+  summary: Intake interface to STAC data catalogs
 
   description: |
     This is an intake data source for STAC catalogs. The SpatioTemporal Asset
