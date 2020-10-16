@@ -5,9 +5,13 @@ Home: https://github.com/pangeo-data/intake-stac
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/intake-stac-feedstock/blob/master/LICENSE.txt)
 
 Summary: Intake interface to STAC data catalogs
+
+Development: https://github.com/pangeo-data/intake-stac
+
+Documentation: https://intake-stac.readthedocs.io
 
 This is an intake data source for STAC catalogs. The SpatioTemporal Asset
 Catalog (STAC) specification provides a common language to describe a
@@ -124,4 +128,5 @@ Feedstock Maintainers
 * [@jhamman](https://github.com/jhamman/)
 * [@matthewhanson](https://github.com/matthewhanson/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@scottyhq](https://github.com/scottyhq/)
 
