@@ -9,23 +9,30 @@ source:
   sha256: 19baf6b6392c9843e1ec988f251e3355d17e389d349d76e1e6ddabf4c0d1cbce
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3
+    - python >=3.6
     - pip
+    - setuptools-scm
   run:
-    - python >=3
-    - intake-xarray
-    - sat-stac
+    - python >=3.6
+    - fsspec >=0.8.4
+    - intake >=0.5.1
+    - intake-xarray >=0.4
+    - sat-stac ==0.4.*
 
 test:
   imports:
     - intake_stac
     - intake_stac.catalog
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pangeo-data/intake-stac
