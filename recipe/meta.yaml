@@ -5,21 +5,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/i/intake-stac/intake_stac-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/i/intake-stac/intake_stac-{{ version }}.tar.gz
   sha256: 9243fbe85dfde12780314c4add858cd5c936174362e6096881b4a2324a11ef84
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
+    - setuptools
     - pip
     - setuptools-scm
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - fsspec >=0.8.4
     - intake >=0.5.1
     - intake-xarray >=0.4
@@ -33,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pangeo-data/intake-stac
